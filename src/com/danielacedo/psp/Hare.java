@@ -1,7 +1,5 @@
 package com.danielacedo.psp;
 
-import java.util.Random;
-
 public class Hare extends Thread{
 	
 	private GameBoard board;
@@ -12,10 +10,8 @@ public class Hare extends Thread{
 	
 	@Override
 	public void run (){
-		Random rnd = new Random();
-		
 		while(!board.isFinished()){
-			board.moveHare(1+rnd.nextInt(10-1));
+			board.moveHare();
 		}
 	}
 }
